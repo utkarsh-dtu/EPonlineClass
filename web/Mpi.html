@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        background-color: rgb(158, 171, 248);
+        height: 50px;
+        border-radius: 10px;
+        color: white;
+
+    }
+
+    .navbar li {
+        list-style: none;
+        border: 1px solid black;
+        border-radius: 7px;
+        padding: 7px;
+        background-color: blue;
+        color: white;
+        margin: 7px;
+        transition-duration: 100ms;
+    }
+
+    .navbar li:hover {
+        background-color: rgb(155, 162, 255);
+    }
+
+    .navbar li a:hover {
+        color: black;
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 4px;
+        margin: 6px;
+        color: white;
+        font-weight: bolder;
+        transition-duration: 100ms;
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid blue;
+        border-radius: 10px;
+        background-color: rgb(211, 243, 243);
+        padding: 10px;
+    }
+
+    .JoinMPIclass {
+        display: block;
+        border: 2px solid black;
+        background-color: rgb(178, 162, 247);
+        padding: 9px;
+        border-radius: 8px;
+        width: 40%;
+        margin: auto;
+    }
+
+    .JoinMPIclass:hover {
+        background-color: blue;
+        color: white;
+
+    }
+
+    .JoinMPIclass a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .JoinMPIclass a:hover {
+        color: white;
+    }
+
+    .sbs {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 4px;
+        display: none;
+    }
+
+    .syl {
+        border: 2px solid black;
+        background-color: rgb(205, 205, 255);
+        display: block;
+        cursor: pointer;
+        /* box-decoration-break: none; */
+        padding: 7px;
+        /* margin: 10px; */
+        margin: 10px auto;
+        border-radius: 8px;
+        width: 155px;
+        /* margin: auto; */
+        outline: none;
+    }
+
+    .syl:hover {
+        background-color: blue;
+        color: white;
+        transition-duration: 100ms;
+    }
+</style>
+
+<body>
+    <ul class="navbar">
+    
+        <li><a href="index.html" target="_blank"
+    >HOME</a></li>
+        <li><a href="Cm.html" target="_blank"
+    >COMPUTATIONAL METHODS</a></li>
+        <li><a href="Mpi.html" target="_blank"
+    >MICROPROCESSORS</a></li>
+        <li><a href="Coms.html" target="_blank"
+    >COMMUNICATION SYSTEMS</a></li>
+        <li><a href="Op.html" target="_blank"
+    >OPTICS</a></li>
+        <li><a href="Cmp.html" target="_blank"
+    >CONDENSED MATTER PHYSICS</a></li>
+        <li><a href="MpiLab.html" target="_blank"
+    >MPI Lab</a></li>
+        <!-- <li><a href="Cmp.html">MPI Lab</a></li> -->
+      </ul>
+    
+
+    <div class="ClassDetails">
+        <button class="JoinMPIclass"><a href="http://meet.google.com/xzz-ufec-qpf">CLICK HERE TO JOIN MICROPROCESSORS
+                AND INTERFACING CLASS</a></button>
+
+
+        <div class="sbs">
+            <p><span style="font-weight: bolder">Introduction</span>: Basic Concepts of Microprocessors, Introduction to
+                8086 Microprocessor.</p>
+            <p><span style="font-weight: bolder">Internal architecture</span>: Internal architecture, Concept of
+                address, data and control buses</p>
+            <p><span style="font-weight: bolder">8086 hardware </span>: 8086 hardware specifications: pin-outs and the
+                pin-functions.</p>
+            <p> Real Mode Memory Addressing, Introduction to protected mode
+                memory addressing</p>
+
+            <p>Memory Address Space Organization.</p>
+            <p>Programming model of 8086-general purpose registers, special purpose registers and segment registers</p>
+            <p>Physical address generation, data addressing modes, program memory addressing modes, stack memory
+                addressing modes</p>
+            <p>data transfer instructions, arithmetic and logic instructions, flag control instructions, program control
+                instructions</p>
+            <p>Input/Output instructions</p>
+            <p>Bus Cycle Timing Diagrams.</p>
+            <p>Minimum and Maximum mode</p>
+            <p>Subroutines: Call and Return Functions.</p>
+            <p>Programmable Interrupt Controller – 8259</p>
+            <p>Programmable Peripheral Interface (PPI) 8255</p>
+            <p>Programmable Direct Memory Access (DMA) Controller - 8237/8257,</p>
+            <p>Programmable Interval Timer - 8253.</p>
+            <p>Introduction to PIC Microcontrollers, PIC microcontroller overview and features, PIC 16F877: ALU, CPU
+                registers, pin diagram</p>
+            <p>PIC reset actions, PIC oscillator connections, PIC memory organization,</p>
+            <p>PIC 16F877 instructions, Addressing modes, I/O ports.</p>
+        </div>
+        <button class="syl">Show/Hide syllabus</button>
+
+    </div>
+
+
+
+</body>
+<script>
+    document.querySelector(".syl").addEventListener("click", function () {
+        // document.querySelector(".sbs").style.display = "block";
+        if (document.querySelector(".sbs").style.display == "block") {
+            document.querySelector(".sbs").style.display = "none"
+        } else {
+            document.querySelector(".sbs").style.display = "block"
+        }
+    });
+</script>
+
+</html>

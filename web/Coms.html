@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        background-color: rgb(158, 171, 248);
+        height: 50px;
+        border-radius: 10px;
+        color: white;
+
+    }
+
+    .navbar li {
+        list-style: none;
+        border: 1px solid black;
+        border-radius: 7px;
+        padding: 7px;
+        background-color: blue;
+        color: white;
+        margin: 7px;
+        transition-duration: 100ms;
+    }
+
+    .navbar li:hover {
+        background-color: rgb(155, 162, 255);
+    }
+
+    .navbar li a:hover {
+        color: black;
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 4px;
+        margin: 6px;
+        color: white;
+        font-weight: bolder;
+        transition-duration: 100ms;
+
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid blue;
+        border-radius: 10px;
+        background-color: rgb(211, 243, 243);
+        padding: 10px;
+    }
+
+    /* .JoinComsclass{
+
+  } */
+    .JoinComsclass {
+        display: block;
+        border: 2px solid black;
+        background-color: rgb(178, 162, 247);
+        padding: 9px;
+        border-radius: 8px;
+        width: 40%;
+        margin: auto;
+    }
+
+    .JoinComsclass:hover {
+        background-color: blue;
+        color: white;
+
+    }
+
+    .JoinComsclass a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .JoinComsclass a:hover {
+        color: white;
+    }
+
+    .sbs {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 4px;
+        display: none;
+    }
+
+    .syl {
+        border: 2px solid black;
+        background-color: rgb(205, 205, 255);
+        display: block;
+        cursor: pointer;
+        /* box-decoration-break: none; */
+        padding: 7px;
+        /* margin: 10px; */
+        margin: 10px auto;
+        border-radius: 8px;
+        width: 155px;
+        /* margin: auto; */
+        outline: none;
+    }
+
+    .syl:hover {
+        background-color: blue;
+        color: white;
+        transition-duration: 100ms;
+    }
+</style>
+
+<body>
+    <ul class="navbar">
+    
+        <li><a href="index.html" target="_blank"
+    >HOME</a></li>
+        <li><a href="Cm.html" target="_blank"
+    >COMPUTATIONAL METHODS</a></li>
+        <li><a href="Mpi.html" target="_blank"
+    >MICROPROCESSORS</a></li>
+        <li><a href="Coms.html" target="_blank"
+    >COMMUNICATION SYSTEMS</a></li>
+        <li><a href="Op.html" target="_blank"
+    >OPTICS</a></li>
+        <li><a href="Cmp.html" target="_blank"
+    >CONDENSED MATTER PHYSICS</a></li>
+        <li><a href="MpiLab.html" target="_blank"
+    >MPI Lab</a></li>
+        <!-- <li><a href="Cmp.html">MPI Lab</a></li> -->
+      </ul>
+    
+
+    <div class="ClassDetails">
+        <button class="JoinComsclass"><a href="https://meet.google.com/wiz-wqmp-qui">CLICK HERE TO JOIN COMMUNICATION
+                SYSTEMS CLASS CLASS</a></button>
+    </div>
+
+    <div class="sbs">
+        <p><span style="font-weight: bolder">Introduction</span>: Block diagram of an electronic communication system,
+            electromagnetic spectrum-band designations and applications, need for modulation.
+            Concept of Noise: External noise, internal noise, signal to noise ratio, noise factor, noise temperature,
+            Friss formula.</p>
+        <p><span style="font-weight: bolder">Amplitude Modulation</span>: modulation index, frequency spectrum,
+            generation of AM (balanced modulator), Amplitude Demodulation (diode detector), Other forms of AM: Double
+            side band suppressed carrier, DSBSC generation (balanced modulator), Single side band suppressed carrier,
+            SSBSC generation (filter method), SSB detection, Introduction to other forms of AM (Pilot Carrier
+            Modulation, Vestigial Side Band modulation).
+            Angle modulation: Frequency and Phase modulation, modulation index and frequency spectrum, equivalence
+            between FM and PM, Generation of FM (direct methods), FM detector (slope detector, PLL).</p>
+        <p><span style="font-weight: bolder"> Pulse Analog Modulation</span>: Sampling theorem, Errors in Sampling.
+            Pulse Amplitude Modulation (PAM), Time Division Multiplexing (TDM). Pulse Width Modulation (PWM) and Pulse
+            Position Modulation (PPM). Generation and detection of PAM, PWM, PPM.
+            Pulse Code Modulation: Need for digital transmission, Quantizing, Uniform and Non-uniform Quantization,
+            Quantization Noise, Companding, Coding, Decoding, Regeneration, Transmission noise and Bit Error Rate.
+            Differential Pulse Code Modulation, Delta Modulation, Adaptive Delta Modulation.</p>
+        <p><span style="font-weight: bolder"> Digital Carrier Modulation Techniques</span>: Information capacity, Bit
+            Rate, Baud Rate and M-ary coding. Amplitude Shift Keying (ASK), Frequency Shift Keying (FSK), Phase Shift
+            Keying (PSK), Binary Phase Shift Keying (BPSK) and Quadrature Phase Shift Keying (QPSK). QPSK, Amplitude
+            modulation, bandwidth efficiency, carrier recovery – squaring loop, Costas loop, DPSK.</p>
+    </div>
+    <button class="syl">Show/Hide syllabus</button>
+
+
+</body>
+
+<script>
+    document.querySelector(".syl").addEventListener("click", function () {
+        // document.querySelector(".sbs").style.display = "block";
+        if (document.querySelector(".sbs").style.display == "block") {
+            document.querySelector(".sbs").style.display = "none"
+        } else {
+            document.querySelector(".sbs").style.display = "block"
+        }
+    });
+</script>
+
+</html>

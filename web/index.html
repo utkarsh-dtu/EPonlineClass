@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: rgb(158, 171, 248);
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+
+  }
+
+  .navbar li {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: blue;
+    color: white;
+    margin: 7px;
+    transition-duration: 100ms;
+  }
+
+  .navbar li:hover {
+    background-color: rgb(155, 162, 255);
+  }
+
+  .navbar li a:hover {
+    color: black;
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 4px;
+    margin: 6px;
+    color: white;
+    font-weight: bolder;
+    transition-duration: 100ms;
+
+  }
+
+  
+
+  .Time-Table {
+    display: inline;
+    border: 2px solid black;
+    height: 35rem;
+    width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    /* grid-template-rows: repeat(5,1fr); */
+    grid-template-rows: 1fr repeat(5, 4fr);
+    background-color: rgb(214, 242, 255);
+    border-radius: 10px;
+  }
+
+  .container {
+    border: 2px solid black;
+    display: flex;
+    text-align: center;
+    /* align-self: center;
+    justify-content: center; */
+  }
+
+  #div-24 {
+    grid-column: span 2/4;
+    background-color: rgb(192, 187, 187);
+    text-align: center;
+  }
+
+  #div-45 {
+    grid-column: span 2/4;
+    background-color: rgb(192, 187, 187);
+    text-align: center;
+  }
+
+  #div-16,#div-26,#div-37,#div-47,#div-58,#div-28,#div-39,#div-49,#div-40,#div-51,#div-61,#div-62{
+    background-color: aquamarine;
+  }
+
+  
+
+  /* #div-13{
+    grid-column: span 2/4;
+  } */
+
+  
+
+  .NextClass {
+    display: inline;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 35rem;
+    margin: 0px 10px;
+    width: 519px;
+  }
+
+  .Wrapper {
+    display: flex;
+    /* border: 2px dotted black; */
+  }
+  .ClassAlert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted black;
+    padding: 7px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: rgb(211, 243, 243);
+    padding: 10px;
+    font-weight: bold;
+  }
+  .img{
+    /* float: left; */
+    height: 40px;
+    left: 0;
+    filter: brightness(150%);
+
+  }
+  .ImageDiv{
+    /* align-self: flex-start;
+    fl */
+    /* position: absolute; */
+    float: left;
+    /* left: 0; */
+    transform: translateX(-382px);
+  }
+  .ImageDiv2{
+    transform: translateX(1022px);
+  }
+  .TodoList
+  {
+    border: 2px solid black;
+    padding: 7px;
+    transition-duration: 100ms;
+    outline: none;
+    margin: 4px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    background: rgb(189, 189, 250);
+  }
+  .TodoList:hover{
+    background: blue;
+    color: white;
+  }
+  .JoinButton:hover{
+    background-color: white;
+    color: blue;
+    transition-duration: 100ms;
+  }
+  .JoinButton:hover .aj{
+    color: blue;
+    transition-duration: 100ms;
+  }
+  
+</style>
+
+<body>
+  <header>
+    <div class="ImageDiv"><img src="DTULOGO.png" alt="" class="img"></div>
+    <div class="ImageDiv2"><img src="DTULOGO.png" alt="" class="img"></div>
+    <p>Welcome to The DTU Online class</p>
+    
+    <p> Select the class which you want to enter from the below links</p>
+  </header>
+
+  <ul class="navbar">
+    
+    <li><a href="index.html" target="_blank"
+>HOME</a></li>
+    <li><a href="Cm.html" target="_blank"
+>COMPUTATIONAL METHODS</a></li>
+    <li><a href="Mpi.html" target="_blank"
+>MICROPROCESSORS</a></li>
+    <li><a href="Coms.html" target="_blank"
+>COMMUNICATION SYSTEMS</a></li>
+    <li><a href="Op.html" target="_blank"
+>OPTICS</a></li>
+    <li><a href="Cmp.html" target="_blank"
+>CONDENSED MATTER PHYSICS</a></li>
+    <li><a href="MpiLab.html" target="_blank"
+>MPI Lab</a></li>
+    <!-- <li><a href="Cmp.html">MPI Lab</a></li> -->
+  </ul>
+
+
+
+  <div class="Wrapper">
+
+    <div class="Time-Table">
+
+
+      <div class="container" id="div-1"></div>
+      <div class="container" id="div-2"> 8-9</div>
+      <div class="container" id="div-3"> 9-10</div>
+      <div class="container" id="div-4"> 10-11</div>
+      <div class="container" id="div-5"> 11-12</div>
+      <div class="container" id="div-6"> 12-1</div>
+      <div class="container" id="div-7"> 1-2</div>
+      <div class="container" id="div-8"> 2-3</div>
+      <div class="container" id="div-9"> 3-4</div>
+      <div class="container" id="div-10"> 4-5</div>
+      <div class="container" id="div-11"> 5-6</div>
+      <div class="container" id="div-12">12 Monday</div>
+      <div class="container" id="div-13" style=" border-right: none;">13 CS-LAB </div>
+      <div class="container" id="div-14" style="border-left: none;"></div>
+      <div class="container" id="div-15" style="display: flex; justify-content: center; align-items: center;">
+        15 
+        CM
+
+        
+
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Cm.html" style="text-decoration: none; color: white;">Join</a></button>
+
+      </div>
+      <div class="container" id="div-16">16 </div>
+      <div class="container" id="div-17">17 CMP
+
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Cmp.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-18">18 CM</div>
+      <div class="container" id="div-19">19</div>
+      <div class="container" id="div-20">20 MPI
+
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Mpi.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-21" style="border-right: none;">21 MPI LAB
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="MpiLab.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-22" style="border-left:none;">22 </div>
+      <div class="container" id="div-23">23</div>
+      <div class="container" id="div-24"> FEC</div>
+      <div class="container" id="div-25">25
+        CS
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Coms.html" style="text-decoration: none; color: white;">Join</a></button>
+
+      </div>
+      <div class="container" id="div-26">26</div>
+      <div class="container" id="div-27">27
+        CMP
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Cmp.html" style="text-decoration: none; color: white;">Join</a></button>
+
+      </div>
+      <div class="container" id="div-28">28</div>
+      <div class="container" id="div-29">29
+
+        CMP
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Cmp.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-30">30
+        MPI
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Mpi.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-31">31</div>
+      <div class="container" id="div-32">32</div>
+      <div class="container" id="div-33">33</div>
+      <div class="container" id="div-34">34</div>
+      <div class="container" id="div-35">35</div>
+      <div class="container" id="div-36">36
+        OP
+        
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Op.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-37">37</div>
+      <div class="container" id="div-38">38
+        OP
+        
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Op.html" style="text-decoration: none; color: white;">Join</a></button>
+        
+      </div>
+      <div class="container" id="div-39">39</div>
+      <div class="container" id="div-40">40</div>
+      <div class="container" id="div-41">41
+        MPI
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Mpi.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-42">42</div>
+      <div class="container" id="div-43">43</div>
+      <div class="container" id="div-44">44</div>
+      <div class="container" id="div-45"> FEC</div>
+      <div class="container" id="div-46">46
+        CS
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Coms.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-47">47</div>
+      <div class="container" id="div-48">48
+        CM
+
+        
+
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Cm.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-49">49</div>
+      <div class="container" id="div-50">50
+        CM
+
+        
+
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Cm.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-51">51</div>
+      <div class="container" id="div-52">52</div>
+      <div class="container" id="div-53">53</div>
+      <div class="container" id="div-54">54</div>
+      <div class="container" id="div-55">55</div>
+      <div class="container" id="div-56">56
+        OP
+        
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Op.html" style="text-decoration: none; color: white;">Join</a></button>
+      </div>
+      <div class="container" id="div-57">57
+        CS
+        <button class="JoinButton" style="border: 1px solid black; background-color: blue; color: white; align-self: flex-end; border-radius: 7px; "><a class="Aj" href="Coms.html" style="text-decoration: none; color: white;">Join</a></button>
+        
+      </div>
+      <div class="container" id="div-58">58</div>
+      <div class="container" id="div-59">59</div>
+      <div class="container" id="div-60">60</div>
+      <div class="container" id="div-61" style="border-right :none;">61</div>
+      <div class="container" id="div-62" style="border-left: none;">62</div>
+      <div class="container" id="div-63">63</div>
+      <div class="container" id="div-64">64</div>
+
+
+    </div>
+
+
+    <div class="NextClass">
+      <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam necessitatibus esse iusto. -->
+      <div style="text-align:center;padding:1em 0;"> <h4><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/country/in"><span style="color:gray;">Current local time in</span><br />India</a></h4> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Asia%2FKolkata" width="100%" height="90" frameborder="0" seamless></iframe> </div>
+
+
+      <div class="ClassAlert">
+
+      </div>
+
+      <div class="MyTodoList">
+        <button class="TodoList">TO-DO-LIST</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</body>
+<script>
+  let curdate = new Date();
+  let CurDay = curdate.getDay();
+  let curTime = curdate.getHours();
+
+  if(CurDay == 1)
+  {
+    if(curTime >=8 && curTime <= 9){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> Communication systems Labs in progress';
+    }
+    else if(curTime >=10 && curTime <= 11){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> COMPUTATIONAL METHODS CLASS in progress</a>';
+    }
+    else if(curTime >=11 && curTime <= 12){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> Condensed Matter Physics from 12-1</a>';
+    }
+    else if(curTime >=11 && curTime <= 12){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> Condensed Matter Physics from 12-1</a>';
+    }
+    else if(curTime >=1 && curTime <= 2){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> COMPUTATIONAL METHODS CLASS in progress</a>';
+    }
+    else if(curTime >=2 && curTime <= 3){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = "">MPI class from 3-4</a>';
+    }
+    else if(curTime >=3 && curTime <= 4){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = "">MPI class in progress</a>';
+    }
+    else if(curTime >=4 && curTime <= 6){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = "">MPI LAb in progress</a>';
+    }
+
+
+  } else if(CurDay == 2){
+    if(curTime >=8 && curTime <= 9){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> SPORTS FEC ';
+    }
+    else if(curTime >=10 && curTime <= 11){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> COMMUNICATION SYSTEMS CLASS IN PROGRESS</a>';
+    }
+    
+    else if(curTime >=11 && curTime <= 12){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> CONDENSED MATTER PHYSICS from 12</a>';
+    }
+    else if(curTime >=12 && curTime <= 1){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> CONDENSED MATTER PHYSICS IN PROGRESS</a>';
+    }
+    else if(curTime >=1 && curTime <= 2){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> CONDENSED MATTER PHYSICS from 2</a>';
+    }
+    else if(curTime >=2 && curTime <= 3){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = ""> CONDENSED MATTER PHYSICS IN PROGRESS</a>';;
+    }
+    else if(curTime >=3 && curTime <= 4){
+      document.querySelector('.ClassAlert').innerHTML = '<a href = "">MPI class in progress</a>';
+    }
+    else {
+      document.querySelector('.ClassAlert').innerHTML = 'All classes over, come tomorrow';
+    }
+    
+
+  } else if(CurDay == 3){
+    document.querySelector('.ClassAlert').innerHTML = 'WORK IN PROGRESS, CLASS TIMINGS WILL BE UPDATED SOON ';
+
+  } else if(CurDay == 4){
+    document.querySelector('.ClassAlert').innerHTML = 'WORK IN PROGRESS, CLASS TIMINGS WILL BE UPDATED SOON ';
+
+  } else if(CurDay == 5){
+    document.querySelector('.ClassAlert').innerHTML = 'WORK IN PROGRESS, CLASS TIMINGS WILL BE UPDATED SOON ';
+    
+  } else if(CurDay == 6){
+    document.querySelector('.ClassAlert').innerHTML = 'NO CLASES ENJOY!!';
+  } else{
+    document.querySelector('.ClassAlert').innerHTML = 'NO CLASES ENJOY!!';
+  }
+
+</script>
+
+</html>

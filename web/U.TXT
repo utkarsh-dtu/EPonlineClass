@@ -1,0 +1,13 @@
+Introduction: Block diagram of an electronic communication system, electromagnetic spectrum-band designations and applications, need for modulation.
+Concept of Noise: External noise, internal noise, signal to noise ratio, noise factor, noise temperature, Friss formula.
+08
+2.
+Amplitude modulation: modulation index, frequency spectrum, generation of AM (balanced modulator), Amplitude Demodulation (diode detector), Other forms of AM: Double side band suppressed carrier, DSBSC generation (balanced modulator), Single side band suppressed carrier, SSBSC generation (filter method), SSB detection, Introduction to other forms of AM (Pilot Carrier Modulation, Vestigial Side Band modulation).
+Angle modulation: Frequency and Phase modulation, modulation index and frequency spectrum, equivalence between FM and PM, Generation of FM (direct methods), FM detector (slope detector, PLL).
+12
+3.
+Pulse Analog Modulation: Sampling theorem, Errors in Sampling. Pulse Amplitude Modulation (PAM), Time Division Multiplexing (TDM). Pulse Width Modulation (PWM) and Pulse Position Modulation (PPM). Generation and detection of PAM, PWM, PPM.
+Pulse Code Modulation: Need for digital transmission, Quantizing, Uniform and Non-uniform Quantization, Quantization Noise, Companding, Coding, Decoding, Regeneration, Transmission noise and Bit Error Rate. Differential Pulse Code Modulation, Delta Modulation, Adaptive Delta Modulation.
+12
+4.
+Digital Carrier Modulation Techniques: Information capacity, Bit Rate, Baud Rate and M-ary coding. Amplitude Shift Keying (ASK), Frequency Shift Keying (FSK), Phase Shift Keying (PSK), Binary Phase Shift Keying (BPSK) and Quadrature Phase Shift Keying (QPSK). QPSK, Amplitude modulation, bandwidth efficiency, carrier recovery – squaring loop, Costas loop, DPSK.
